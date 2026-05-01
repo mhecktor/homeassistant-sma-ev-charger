@@ -41,7 +41,14 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     for device in hass_data[CONF_SELECTED_DEVICES]:
         coordinator = SMAEvChargerDataUpdateCoordinator(
-            hass, entry, SMAEvDevice(**device), api
+            hass,
+            entry,
+            SMAEvDevice(
+                component_id=device["component_id"],
+                name=device["name"],
+                component_type=device["component_type"],
+            ),
+            api,
         )
         await coordinator._async_setup()
         coordinators.append(coordinator)
