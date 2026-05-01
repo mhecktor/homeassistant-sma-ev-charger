@@ -1,0 +1,46 @@
+{
+  "config": {
+    "progress": {
+      "fetching_token": "Authenticating with your SMA EV Charger…",
+      "fetching_devices": "Loading devices from your SMA EV Charger…"
+    },
+    "step": {
+      "user": {
+        "title": "Connect to SMA EV Charger",
+        "description": "Enter the connection details for your SMA EV Charger.",
+        "data": {
+          "host": "Host",
+          "username": "Username",
+          "password": "Password"
+        },
+        "data_description": {
+          "host": "IP address or hostname of your SMA EV Charger (e.g. 192.168.1.100)",
+          "username": "Your SMA EV Charger login username",
+          "password": "Your SMA EV Charger login password"
+        }
+      },
+      "device_selection": {
+        "title": "Loading devices"
+      },
+      "device_selection_form": {
+        "title": "Select devices",
+        "description": "Choose which devices you want to add to Home Assistant.",
+        "data": {
+          "devices": "Devices"
+        }
+      },
+      "device_selection_error": {
+        "title": "Failed to load devices",
+        "description": "Could not load devices from your SMA EV Charger. Click Submit to try again or go back and check your connection details."
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid credentials. Please check your username and password.",
+      "fetching_token_failed": "Could not authenticate with the SMA EV Charger. Check the host and try again.",
+      "fetching_devices_failed": "Could not load devices from the SMA EV Charger. Check the logs for details."
+    },
+    "abort": {
+      "already_configured": "This SMA EV Charger is already configured."
+    }
+  }
+}
